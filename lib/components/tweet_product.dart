@@ -17,6 +17,12 @@ class TweetProducts extends StatelessWidget {
           child: Card(
             margin: const EdgeInsets.all(8.0),
             child: ListTile(
+              leading: const CircleAvatar(
+                radius: 30.0,
+                backgroundImage:
+                NetworkImage("https://fastly.picsum.photos/id/950/200/200.jpg?hmac=IMndM4w_a_8AXRuOtaCnz3dLpG7AaFpWKOPndcfLW0g"),
+                backgroundColor: Colors.transparent,
+              ),
               title: Text(listTweets[index].author),
               subtitle: Column(
                 children: [

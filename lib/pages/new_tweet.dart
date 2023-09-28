@@ -87,6 +87,7 @@ class _NewTweetPageState extends State<NewTweetPage> {
                       options: MapOptions(
                         center: myPosition,
                         zoom: 15.2,
+                        maxZoom: 18.3,
                       ),
                       children: [
                       TileLayer(

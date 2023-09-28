@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:xclone/login.dart';
-import 'package:xclone/home.dart';
+
+import 'home.dart';
+import 'login.dart';
+import 'new_tweet.dart';
 
 
 void main() {
@@ -17,10 +19,14 @@ class MyApp extends StatelessWidget {
         builder: (context, state) => const LoginWidget(),
       ),
       GoRoute(
-        path: '/home/:email',
-        builder: (context, state) => TwitterPage(
-            state.pathParameters["email"] ?? ""
-        ),
+        path: '/home',
+        builder: (context, state) => TwitterPage(state.extra == null ? "" : state.extra as String),
+        routes: [
+          GoRoute(
+            path: 'new',
+            builder: (context, state) => const NewTweetPage(),
+          )
+        ]
       ),
     ],
     errorBuilder: (context, state) => Scaffold(

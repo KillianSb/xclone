@@ -27,7 +27,7 @@ class TweetProducts extends StatelessWidget {
               subtitle: Column(
                 children: [
                   Text(listTweets[index].message,maxLines: 2),
-                  const ButtonTweetBar()
+                  const ButtonTweetBar(),
                 ],
               ),
             ),

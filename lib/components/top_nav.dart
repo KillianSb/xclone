@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class TopNavigationTwitter extends StatelessWidget {
   const TopNavigationTwitter({
@@ -14,7 +15,7 @@ class TopNavigationTwitter extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(onPressed:  (){}, icon: const Icon(Icons.edit), color: Colors.white),
+            IconButton(onPressed:  (){context.go('/home/new');}, icon: const Icon(Icons.edit), color: Colors.white),
             TextButton(onPressed: (){}, child: const Text("Accueil",
               style: TextStyle(color: Colors.white),)),
             IconButton(onPressed:  (){}, icon: const Icon(Icons.search), color: Colors.white),

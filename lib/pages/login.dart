@@ -78,7 +78,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       content: Text("Connecté !")
                                   ),
                                 );
-                                context.go('/home/${textControllerIdentifiant.text}');
+                                context.go('/home', extra: textControllerIdentifiant.text);
                               }else{
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(

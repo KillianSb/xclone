@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'components/bottom_nav.dart';
-import 'components/top_nav.dart';
-import 'components/tweet.dart';
-import 'components/tweet_product.dart';
+import '../components/bottom_nav.dart';
+import '../components/top_nav.dart';
+import '../components/tweet.dart';
+import '../components/tweet_product.dart';
 class TwitterPage extends StatelessWidget {
   final String email;
-  const TwitterPage(this.email,{super.key});
+  const TwitterPage(this.email, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,9 @@ class TwitterPage extends StatelessWidget {
       body:  Column(
         children: [
           const TopNavigationTwitter(),
-          Text(email),
+          Text("Bienvenue $email"),
           FutureBuilder<Response>(
               future: get(Uri.parse('https://raw.githubusercontent.com/Chocolaterie/EniWebService/main/api/tweets.json')),
-
               builder: (context, snapshot) {
                 if (snapshot.hasData && snapshot.data != null) {
                   final listMapJSON = jsonDecode(snapshot.data!.body) as List<dynamic>;

@@ -39,6 +39,7 @@ dependencies:
   http: ^1.1.0
   file_picker: ^5.5.0
   flutter_map: ^5.0.0
+  geolocator: ^10.1.0
 
 dev_dependencies:
   flutter_test:

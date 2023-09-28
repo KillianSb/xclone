@@ -61,7 +61,7 @@ class _ButtonTweetBarState extends State<ButtonTweetBar> {
           },
         ),
         IconButton(
-          icon: isLiked ? const Icon(Icons.favorite, color: Colors.red) : const Icon(Icons.heart_broken_outlined, color: Colors.black),
+          icon: isLiked ? const Icon(Icons.favorite, color: Colors.red) : const Icon(Icons.favorite_outline, color: Colors.black),
           onPressed: (){
             setState(() {
               _likeTweet ();

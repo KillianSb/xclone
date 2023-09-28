@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'home.dart';
-import 'login.dart';
-import 'new_tweet.dart';
+import 'pages/home.dart';
+import 'pages/login.dart';
+import 'pages/new_tweet.dart';
 
 
 void main() {

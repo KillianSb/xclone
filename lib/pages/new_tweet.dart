@@ -99,8 +99,12 @@ class _NewTweetPageState extends State<NewTweetPage> {
                         markers: [
                           Marker(
                               point: myPosition,
-                              builder: (ctx) => const Icon(Icons.location_pin,
-                                  size: 40, color: Colors.red))
+                              builder: (ctx) =>
+                              const Icon(
+                                  Icons.location_pin,
+                                  size: 40, color: Colors.red
+                              )
+                          )
                         ],
                       )
                     ]))
